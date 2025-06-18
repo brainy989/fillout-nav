@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fillout Navigation Demo (Next.js & Tailwind)
+
+A responsive, animated page navigation UI built with Next.js App Router, TypeScript, and Tailwind CSS. Features dynamic page button management, icons, drag-and-drop reordering, rename/duplicate/delete, and animated menus.
+
+## Features
+
+- Built with Next.js App Router (TypeScript)
+- Fully componentized: NavButton, AddPageButton, animated SettingsMenu, and modular SVG icons
+- SmallPlusButton between items for inserting pages
+- Draggable list, renaming, reordering, duplicating, deleting items
+- Modern, springy menu animation (Framer Motion)
+- Tailwind CSS and clsx for dynamic styling
+- Custom Google fonts via next/font
+
+## Tech Stack/Dependencies
+
+- [Next.js 14+](https://nextjs.org/)
+- [React 18+](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) (for menu animation)
+- [clsx](https://github.com/lukeed/clsx) (utility for class composition)
+- [Geist & Geist Mono](https://vercel.com/font) fonts
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+2. **Run the app:**
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit [http://localhost:3000](http://localhost:3000).
+
+## Folder Structure
+
+```
+fillout-nav/
+├── src/
+│   └── app/
+│       ├── components/
+│       │   ├── AddPageButton.tsx
+│       │   ├── NavButton.tsx
+│       │   ├── Navigation.tsx
+│       │   ├── SettingsMenu.tsx
+│       │   └── icons/
+│       │       └── [IconName]Icon.tsx
+│       ├── globals.css
+│       ├── layout.tsx
+│       └── page.tsx
+├── public/
+│   └── [SVG assets]
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── next.config.[ts|js]
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `yarn dev` / `npm run dev` — Start the Next.js development server
+- `yarn build` / `npm run build` — Build the app for production
+- `yarn lint` / `npm run lint` — Lint all source files
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+- **Icons:** Place new icon components in `src/app/components/icons/`
+- **Animation:** Adjust Framer Motion params in `NavButton.tsx` for spring/slide effect
+- **Styling:** Tune styles with Tailwind and arbitrary values for pixel-perfect design
 
-To learn more about Next.js, take a look at the following resources:
+## Credits
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Geist Font](https://vercel.com/font)
+- [Fillout Challenge inspiration](https://fillout.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Want to contribute or discuss improvements? Open an issue or submit a PR!
